@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build outputs
+dist/
+build/
+*.o
+*.so
+
+# Testing
+.coverage
+htmlcov/
+__pycache__/
+.pytest_cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS specific
+.DS_Store
+*.exe
