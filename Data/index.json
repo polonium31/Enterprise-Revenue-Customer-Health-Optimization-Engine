@@ -1,0 +1,787 @@
+[
+  {
+    "p_rel_url": "Customers/customers_chunk_1.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_1.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_2.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_2.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_3.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_3.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_4.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_4.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_5.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_5.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_6.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_6.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_7.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_7.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_8.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_8.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_9.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_9.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_10.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_10.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_11.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_11.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_12.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_12.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_13.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_13.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_14.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_14.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_15.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_15.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_16.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_16.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_17.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_17.csv"
+  },
+  {
+    "p_rel_url": "Customers/customers_chunk_18.csv",
+    "p_sink_folder": "Customers",
+    "p_sink_file": "customers_chunk_18.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_1.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_1.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_2.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_2.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_3.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_3.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_4.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_4.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_5.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_5.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_6.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_6.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_7.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_7.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_8.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_8.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_9.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_9.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_10.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_10.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_11.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_11.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_12.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_12.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_13.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_13.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_14.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_14.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_15.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_15.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_16.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_16.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_17.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_17.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_18.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_18.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_19.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_19.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_20.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_20.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_21.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_21.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_22.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_22.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_23.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_23.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_24.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_24.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_25.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_25.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_26.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_26.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_27.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_27.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_28.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_28.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_29.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_29.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_30.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_30.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_31.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_31.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_32.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_32.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_33.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_33.csv"
+  },
+  {
+    "p_rel_url": "Invoices/invoice_chunk_34.csv",
+    "p_sink_folder": "Invoices",
+    "p_sink_file": "invoice_chunk_34.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_1.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_1.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_2.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_2.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_3.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_3.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_4.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_4.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_5.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_5.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_6.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_6.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_7.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_7.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_8.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_8.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_9.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_9.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_10.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_10.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_11.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_11.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_12.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_12.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_13.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_13.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_14.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_14.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_15.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_15.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_16.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_16.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_17.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_17.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_18.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_18.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_19.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_19.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_20.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_20.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_21.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_21.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_22.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_22.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_23.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_23.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_24.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_24.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_25.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_25.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_26.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_26.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_27.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_27.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_28.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_28.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_29.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_29.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_30.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_30.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_31.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_31.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_32.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_32.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_33.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_33.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_34.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_34.csv"
+  },
+  {
+    "p_rel_url": "Orders/orders_chunk_35.csv",
+    "p_sink_folder": "Orders",
+    "p_sink_file": "orders_chunk_35.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_1.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_1.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_2.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_2.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_3.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_3.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_4.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_4.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_5.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_5.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_6.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_6.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_7.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_7.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_8.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_8.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_9.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_9.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_10.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_10.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_11.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_11.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_12.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_12.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_13.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_13.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_14.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_14.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_15.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_15.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_16.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_16.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_17.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_17.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_18.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_18.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_19.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_19.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_20.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_20.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_21.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_21.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_22.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_22.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_23.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_23.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_24.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_24.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_25.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_25.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_26.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_26.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_27.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_27.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_28.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_28.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_29.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_29.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_30.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_30.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_31.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_31.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_32.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_32.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_33.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_33.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_34.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_34.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_35.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_35.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_36.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_36.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_37.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_37.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_38.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_38.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_39.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_39.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_40.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_40.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_41.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_41.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_42.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_42.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_43.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_43.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_44.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_44.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_45.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_45.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_46.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_46.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_47.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_47.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_48.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_48.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_49.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_49.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_50.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_50.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_51.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_51.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_52.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_52.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_53.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_53.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_54.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_54.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_55.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_55.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_56.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_56.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_57.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_57.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_58.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_58.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_59.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_59.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_60.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_60.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_61.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_61.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_62.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_62.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_63.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_63.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_64.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_64.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_65.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_65.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_66.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_66.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_67.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_67.csv"
+  },
+  {
+    "p_rel_url": "Order_Items/order_items_chunk_68.csv",
+    "p_sink_folder": "Order_Items",
+    "p_sink_file": "order_items_chunk_68.csv"
+  },
+  {
+    "p_rel_url": "Products/products_chunk_1.csv",
+    "p_sink_folder": "Products",
+    "p_sink_file": "products_chunk_1.csv"
+  },
+  {
+    "p_rel_url": "Products/products_chunk_2.csv",
+    "p_sink_folder": "Products",
+    "p_sink_file": "products_chunk_2.csv"
+  }
+]

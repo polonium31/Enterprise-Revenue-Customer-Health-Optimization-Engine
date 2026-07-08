@@ -1,0 +1,14 @@
+[
+  {
+    "table_name": "CUSTOMERS"
+  },
+  {
+    "table_name": "PRODUCTS"
+  },
+  {
+    "table_name": "SALES_INVOICES"
+  },
+  {
+    "table_name": "DATE_TABLE"
+  }
+]

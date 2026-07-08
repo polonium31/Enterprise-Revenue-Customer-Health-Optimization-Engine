@@ -1,0 +1,20 @@
+[
+  {
+    "p_sink_folder": "Customers"
+  },
+  {
+    "p_sink_folder": "Customers_Geography"
+  },
+  {
+    "p_sink_folder": "Orders"
+  },
+  {
+    "p_sink_folder": "Invoices"
+  },
+  {
+    "p_sink_folder": "Order_Items"
+  },
+  {
+    "p_sink_folder": "Products"
+  }
+]

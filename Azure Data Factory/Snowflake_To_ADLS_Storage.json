@@ -1,0 +1,202 @@
+{
+  "name": "Snowflake_To_ADLS_Storage",
+  "properties": {
+    "activities": [
+      {
+        "name": "Lookup_Snowflake_Tables_Index",
+        "type": "Lookup",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "userProperties": [],
+        "typeProperties": {
+          "source": {
+            "type": "JsonSource",
+            "storeSettings": {
+              "type": "AzureBlobFSReadSettings",
+              "recursive": true,
+              "enablePartitionDiscovery": false
+            },
+            "formatSettings": {
+              "type": "JsonReadSettings"
+            }
+          },
+          "dataset": {
+            "referenceName": "Snowflake_Table_Index",
+            "type": "DatasetReference"
+          },
+          "firstRowOnly": false
+        }
+      },
+      {
+        "name": "ForEach_In_Lookup",
+        "type": "ForEach",
+        "dependsOn": [
+          {
+            "activity": "Lookup_Snowflake_Tables_Index",
+            "dependencyConditions": ["Succeeded"]
+          }
+        ],
+        "userProperties": [],
+        "typeProperties": {
+          "items": {
+            "value": "@activity('Lookup_Snowflake_Tables_Index').output.value",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "name": "Copy_data_from_Snowflake_to_ADLS",
+              "type": "Copy",
+              "dependsOn": [],
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "userProperties": [],
+              "typeProperties": {
+                "source": {
+                  "type": "SnowflakeV2Source",
+                  "exportSettings": {
+                    "type": "SnowflakeExportCopyCommand"
+                  }
+                },
+                "sink": {
+                  "type": "DelimitedTextSink",
+                  "storeSettings": {
+                    "type": "AzureBlobFSWriteSettings"
+                  },
+                  "formatSettings": {
+                    "type": "DelimitedTextWriteSettings",
+                    "quoteAllText": true,
+                    "fileExtension": ".txt"
+                  }
+                },
+                "enableStaging": true,
+                "stagingSettings": {
+                  "linkedServiceName": {
+                    "referenceName": "LS_BlobStorage",
+                    "type": "LinkedServiceReference"
+                  },
+                  "path": "snowflake-staging"
+                },
+                "translator": {
+                  "type": "TabularTranslator",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  }
+                }
+              },
+              "inputs": [
+                {
+                  "referenceName": "SnowflakeTable",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "SourceTableName": {
+                      "value": "@item().table_name",
+                      "type": "Expression"
+                    }
+                  }
+                }
+              ],
+              "outputs": [
+                {
+                  "referenceName": "Snowflake_To_stagging",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "TableName": "@item().table_name"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Copy data_from_CSV_curated_stagging_to_curated_data",
+              "type": "Copy",
+              "dependsOn": [
+                {
+                  "activity": "Copy_data_from_Snowflake_to_ADLS",
+                  "dependencyConditions": ["Succeeded"]
+                }
+              ],
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "userProperties": [],
+              "typeProperties": {
+                "source": {
+                  "type": "DelimitedTextSource",
+                  "storeSettings": {
+                    "type": "AzureBlobFSReadSettings",
+                    "recursive": true,
+                    "enablePartitionDiscovery": false
+                  },
+                  "formatSettings": {
+                    "type": "DelimitedTextReadSettings"
+                  }
+                },
+                "sink": {
+                  "type": "ParquetSink",
+                  "storeSettings": {
+                    "type": "AzureBlobFSWriteSettings",
+                    "copyBehavior": "PreserveHierarchy"
+                  },
+                  "formatSettings": {
+                    "type": "ParquetWriteSettings",
+                    "maxRowsPerFile": 500000,
+                    "fileNamePrefix": {
+                      "value": "@concat(item().table_name, '_')",
+                      "type": "Expression"
+                    }
+                  }
+                },
+                "enableStaging": false,
+                "translator": {
+                  "type": "TabularTranslator",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  }
+                }
+              },
+              "inputs": [
+                {
+                  "referenceName": "Datalake_CSV_Stagging_Curated",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "TableName": "@item().table_name"
+                  }
+                }
+              ],
+              "outputs": [
+                {
+                  "referenceName": "Snowflake_to_ADLS_Parquet",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "TableName": "@item().table_name"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "annotations": [],
+    "lastPublishTime": "2026-07-03T18:57:49Z"
+  },
+  "type": "Microsoft.DataFactory/factories/pipelines"
+}

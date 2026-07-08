@@ -1,0 +1,134 @@
+{
+  "name": "HTTP_To_RAW_Data_Lake_Pipeline",
+  "properties": {
+    "activities": [
+      {
+        "name": "Lookup_File_Index",
+        "type": "Lookup",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "userProperties": [],
+        "typeProperties": {
+          "source": {
+            "type": "JsonSource",
+            "storeSettings": {
+              "type": "AzureBlobFSReadSettings",
+              "recursive": true,
+              "enablePartitionDiscovery": false
+            },
+            "formatSettings": {
+              "type": "JsonReadSettings"
+            }
+          },
+          "dataset": {
+            "referenceName": "Data_Lake_To_Json",
+            "type": "DatasetReference"
+          },
+          "firstRowOnly": false
+        }
+      },
+      {
+        "name": "For_Each",
+        "type": "ForEach",
+        "dependsOn": [
+          {
+            "activity": "Lookup_File_Index",
+            "dependencyConditions": ["Succeeded"]
+          }
+        ],
+        "userProperties": [],
+        "typeProperties": {
+          "items": {
+            "value": "@activity('Lookup_File_Index').output.value",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "name": "Copy_Data",
+              "type": "Copy",
+              "dependsOn": [],
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "userProperties": [],
+              "typeProperties": {
+                "source": {
+                  "type": "DelimitedTextSource",
+                  "storeSettings": {
+                    "type": "HttpReadSettings",
+                    "requestMethod": "GET"
+                  },
+                  "formatSettings": {
+                    "type": "DelimitedTextReadSettings"
+                  }
+                },
+                "sink": {
+                  "type": "DelimitedTextSink",
+                  "storeSettings": {
+                    "type": "AzureBlobFSWriteSettings",
+                    "copyBehavior": "FlattenHierarchy"
+                  },
+                  "formatSettings": {
+                    "type": "DelimitedTextWriteSettings",
+                    "quoteAllText": true,
+                    "fileExtension": ".txt"
+                  }
+                },
+                "enableStaging": false,
+                "translator": {
+                  "type": "TabularTranslator",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  }
+                }
+              },
+              "inputs": [
+                {
+                  "referenceName": "API_To_CSV",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "p_rel_url": {
+                      "value": "@item().p_rel_url",
+                      "type": "Expression"
+                    }
+                  }
+                }
+              ],
+              "outputs": [
+                {
+                  "referenceName": "CSV_To_DataLake",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "p_sink_folder": {
+                      "value": "@item().p_sink_folder",
+                      "type": "Expression"
+                    },
+                    "p_sink_file": {
+                      "value": "@item().p_sink_file",
+                      "type": "Expression"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "annotations": [],
+    "lastPublishTime": "2026-06-27T13:18:04Z"
+  },
+  "type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,131 @@
+{
+  "name": "Processed_Data_To_Snowflake",
+  "properties": {
+    "activities": [
+      {
+        "name": "Lookup_Processed_Folder_Index",
+        "type": "Lookup",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "userProperties": [],
+        "typeProperties": {
+          "source": {
+            "type": "JsonSource",
+            "storeSettings": {
+              "type": "AzureBlobFSReadSettings",
+              "recursive": true,
+              "enablePartitionDiscovery": false
+            },
+            "formatSettings": {
+              "type": "JsonReadSettings"
+            }
+          },
+          "dataset": {
+            "referenceName": "Processed_Index_Json",
+            "type": "DatasetReference"
+          },
+          "firstRowOnly": false
+        }
+      },
+      {
+        "name": "ForEach_In_Lookup",
+        "type": "ForEach",
+        "dependsOn": [
+          {
+            "activity": "Lookup_Processed_Folder_Index",
+            "dependencyConditions": ["Succeeded"]
+          }
+        ],
+        "userProperties": [],
+        "typeProperties": {
+          "items": {
+            "value": "@activity('Lookup_Processed_Folder_Index').output.value",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "name": "Copy_data_to_Snowflake",
+              "type": "Copy",
+              "dependsOn": [],
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "userProperties": [],
+              "typeProperties": {
+                "source": {
+                  "type": "ParquetSource",
+                  "storeSettings": {
+                    "type": "AzureBlobFSReadSettings",
+                    "recursive": true,
+                    "wildcardFolderPath": {
+                      "value": "@item().p_sink_folder",
+                      "type": "Expression"
+                    },
+                    "wildcardFileName": "*.parquet",
+                    "enablePartitionDiscovery": false
+                  },
+                  "formatSettings": {
+                    "type": "ParquetReadSettings"
+                  }
+                },
+                "sink": {
+                  "type": "SnowflakeV2Sink",
+                  "importSettings": {
+                    "type": "SnowflakeImportCopyCommand"
+                  }
+                },
+                "enableStaging": true,
+                "stagingSettings": {
+                  "linkedServiceName": {
+                    "referenceName": "LS_BlobStorage",
+                    "type": "LinkedServiceReference"
+                  },
+                  "path": "snowflake-staging"
+                },
+                "translator": {
+                  "type": "TabularTranslator",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  }
+                }
+              },
+              "inputs": [
+                {
+                  "referenceName": "Data_Lake_Parquet",
+                  "type": "DatasetReference"
+                }
+              ],
+              "outputs": [
+                {
+                  "referenceName": "Snowflake",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "SinkTableName": {
+                      "value": "@item().p_sink_folder",
+                      "type": "Expression"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "annotations": [],
+    "lastPublishTime": "2026-07-03T18:50:15Z"
+  },
+  "type": "Microsoft.DataFactory/factories/pipelines"
+}
