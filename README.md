@@ -101,18 +101,18 @@ Core tables in MS SQL Server:
    - Bronze layer population
    - Lookup activity for file indexing
 
-   ![HTTP_To_RAW_Data_Lake_Pipeline](Screenshots/HTTP_To_RAW_Data_Lake_Pipeline.png)
+   ![HTTP_To_RAW_Data_Lake_Pipeline](/Diagrams_and_Images/Screenshots/HTTP_To_RAW_Data_Lake_Pipeline.png)
 
 2. **Processed_Data_To_Snowflake.json**
    - Transforms processed data to Snowflake
    - Silver to Gold layer transition
 
-   ![Processed_Data_To_Snowflake](Screenshots/Processed_Data_To_Snowflake.png)
+   ![Processed_Data_To_Snowflake](/Diagrams_and_Images/Screenshots/Processed_Data_To_Snowflake.png)
 
 3. **Snowflake_To_ADLS_Storage.json**
    - Back-syncs aggregated data to Azure Data Lake
 
-   ![Snowflake_To_ADLS_Storage](Screenshots/Snowflake_To_ADLS_Storage.png)
+   ![Snowflake_To_ADLS_Storage](/Diagrams_and_Images/Screenshots/Snowflake_To_ADLS_Storage.png)
 
 ### Databricks Spark Notebooks
 
@@ -122,12 +122,16 @@ Core tables in MS SQL Server:
 - **Products Data Cleaning.ipynb** - Product master data cleansing
 - **Order_Items Data Cleaning.ipynb** - Line-item detail processing
 
+![Azure_Databricks](/Diagrams_and_Images/Screenshots/Azure_Databricks.png)
+
 ### Snowflake Notebooks
 
 - **Data_Transformation.ipynb** - Complex transformations and aggregations
 - **Dynamic_Table_Views.ipynb** - Real-time view creation
 - **Customer_Churn_Prediction.ipynb** - Predictive analytics for churn
 - **streamlit_app.py** - Streamlit dashboard for visualizing KPIs and metrics
+
+![Snowflake](/Diagrams_and_Images/Screenshots/Snowflake.png)
 
 ### RAG Chatbot
 
@@ -200,7 +204,27 @@ The `data_analysis.sql` file includes validation checks:
 
 ## 📊 Dashboard
 
-![Streamlit Dashboard](Screenshots/Streamlit.png)
+### Streamlit Dashboard
+
+![Streamlit Dashboard](/Diagrams_and_Images/Screenshots/Streamlit.png)
+
+### Power BI Dashboard
+
+#### Data Model
+
+![Data Model](PowerBI/Data_Model.png)
+
+#### Executive Revenue and Growth
+
+![Executive Revenue and Growth](PowerBI/Executive_Revenue_and_Growth.png)
+
+#### Product Performance and Velocity
+
+![Product Performance and Velocity](PowerBI/Product_Performance_and_Velocity.png)
+
+#### Financial Risk and Audit
+
+![Financial Risk and Audit](PowerBI/Financial_Risk_and_Audit.png)
 
 ## 🤖 AI Features
 
