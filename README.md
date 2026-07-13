@@ -15,13 +15,13 @@ This enterprise-grade system generates, manages, and analyzes over **4.5 million
 - 🤖 **AI Chatbot:** RAG-powered chatbot for business intelligence queries
 - ☁️ **Cloud Integration:** Azure Databricks, Snowflake, Azure Data Lake, Azure Data Factory
 
----
+## Youtube Video Walkthrough
+
+[![Enterprise Revenue & Customer Health Optimization Engine](https://img.youtube.com/vi/ym_a_aDKMBg/0.jpg)](https://www.youtube.com/watch?v=ym_a_aDKMBg)
 
 ## 📁 Project Architecture Diagram
 
 ![Data Pipeline Architecture Diagram](Diagrams_and_Images/Project_System_Design.png)
-
----
 
 ## 🏗 Medallion Architecture
 
@@ -68,8 +68,6 @@ This enterprise-grade system generates, manages, and analyzes over **4.5 million
 │    • AI-powered query interface                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
-
----
 
 ## 🔑 Key Components
 
@@ -138,8 +136,6 @@ Core tables in MS SQL Server:
 - **chat_bot.py** - Azure AI-powered chatbot for business queries
 - Integrated with project client credentials
 - Real-time Q&A interface for dashboards
-
----
 
 ## 📊 Data Specifications
 
@@ -228,7 +224,9 @@ The `data_analysis.sql` file includes validation checks:
 
 ## 🤖 AI Features
 
-### RAG Chatbot (chat_bot.py)
+### RAG Chatbot
+
+![Chat Bot](Diagrams_and_Images/Screenshots/Chat_Bot.png)
 
 ```python
 # Example: Query customer health metrics
